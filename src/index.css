@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* Custom hard shadow utility classes & micro-interactions */
+.neo-box {
+  border: 3.5px solid #000;
+  box-shadow: 6px 6px 0px 0px #000;
+  transition: all 0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.neo-box-sm {
+  border: 2.5px solid #000;
+  box-shadow: 3px 3px 0px 0px #000;
+  transition: all 0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.neo-box-lg {
+  border: 4px solid #000;
+  box-shadow: 8px 8px 0px 0px #000;
+  transition: all 0.15s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.neo-btn {
+  border: 3.5px solid #000;
+  box-shadow: 5px 5px 0px 0px #000;
+  transition: all 0.15s cubic-bezier(0.2, 0, 0, 1);
+  cursor: pointer;
+  user-select: none;
+}
+
+.neo-btn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 7px 7px 0px 0px #000;
+}
+
+.neo-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 1px 1px 0px 0px #000;
+}
+
+@keyframes marquee-scroll {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 22s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #fffdf0;
+  border-left: 2px solid #000;
+}
+::-webkit-scrollbar-thumb {
+  background: #ffe600;
+  border: 2px solid #000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
