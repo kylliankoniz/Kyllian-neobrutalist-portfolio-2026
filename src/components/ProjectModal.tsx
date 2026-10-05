@@ -242,15 +242,27 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
           {/* Modal Action Footer */}
           <div className="pt-4 border-t-2 border-neutral-300 flex flex-wrap items-center justify-between gap-3">
-            <button
-              onClick={() => {
-                alert(`Redirecting to live demo for ${project.title}`);
-              }}
-              className="neo-btn bg-[#FFE600] text-black font-extrabold text-sm px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-[3px_3px_0px_0px_#000]"
-            >
-              <span>Visit Live Deployment</span>
-              <ExternalLink className="w-4 h-4" />
-            </button>
+            {project.demoUrl ? (
+              <a
+                href={project.demoUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="neo-btn bg-[#FFE600] text-black font-extrabold text-sm px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-[3px_3px_0px_0px_#000]"
+              >
+                <span>Visit Live Deployment</span>
+                <ExternalLink className="w-4 h-4" />
+              </a>
+            ) : (
+              <button
+                onClick={() => {
+                  alert(`Redirecting to live demo for ${project.title}`);
+                }}
+                className="neo-btn bg-[#FFE600] text-black font-extrabold text-sm px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-[3px_3px_0px_0px_#000]"
+              >
+                <span>Visit Live Deployment</span>
+                <ExternalLink className="w-4 h-4" />
+              </button>
+            )}
 
             <button
               onClick={onClose}

@@ -40,6 +40,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       windowStatus: 'LIVE APP',
       theme: 'light',
       highlights: ['Instant Checkout', '60 FPS Animations', 'Spring Physics'],
+      demoUrl: 'https://neo-sneaks.vercel.app/',
       details: {
         problem:
           'Traditional e-commerce carts feel rigid and clunky, leading to high drop-off rates on mobile devices.',
@@ -70,6 +71,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       windowStatus: 'STATUS: ON TRACK',
       theme: 'dark',
       highlights: ['Real-Time Sync', 'Dark Mode Enabled', 'CSV Export'],
+      demoUrl: 'https://fintrack-os-v1.vercel.app/',
       details: {
         problem:
           'Budgeting tools are either overly complex with steep learning curves or aesthetically dull spreadsheets.',
@@ -100,6 +102,7 @@ export const Projects: React.FC<ProjectsProps> = ({ onSelectProject }) => {
       windowStatus: 'STATUS: OK',
       theme: 'dark',
       highlights: ['Interactive Brutalism', 'Framer Motion', 'Accessible UX'],
+      demoUrl: 'https://kylliandev.vercel.app/',
       details: {
         problem:
           'Corporate developer portfolios have converged into repetitive minimalist templates with zero brand personality.',
