@@ -55,7 +55,8 @@ Make sure you have [Node.js](https://nodejs.org/) (v18 or higher) installed.
 
 ## 🌍 Live Demo
 
-- **Production URL:** *(Deploying soon on Vercel)*
+ **Portfolio:** [kylliandev.vercel.app](https://kylliandev.vercel.app/)
+
 
 ## 📫 Let's Connect
 
